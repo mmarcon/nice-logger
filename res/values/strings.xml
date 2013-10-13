@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">NiceLogger</string>
+
+    <string name="log_clear">Clear</string>
+
+</resources>
