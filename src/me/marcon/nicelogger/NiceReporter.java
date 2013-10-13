@@ -61,7 +61,8 @@ public class NiceReporter implements Reporter {
         static final String WTF = "#0000cd";
     }
 
-    public NiceReporter() {
+    public NiceReporter(ViewGroup parentView) {
+        initView(parentView);
     }
 
     @Override
@@ -84,7 +85,7 @@ public class NiceReporter implements Reporter {
         bundle.putStringArrayList(BUNDLED_ENTRIES, entries);
     }
 
-    public void initView(ViewGroup parentView) {
+    private void initView(ViewGroup parentView) {
         this.entries = new ArrayList<String>();
         this.handler = new Handler();
         this.adapter = new ArrayAdapter<String>(parentView.getContext(), R.layout.smart_logger_entry);

@@ -2,12 +2,9 @@ package me.marcon.nicelogger;
 
 import android.location.Location;
 import android.os.Bundle;
-import android.view.ViewGroup;
 
 public interface Reporter {
-    
-    public void initView(ViewGroup parentView);
-
+   
     public void onCreate(Bundle bundle);
 
     public void v(String tag, String message, Throwable t);
